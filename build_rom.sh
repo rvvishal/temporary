@@ -1,6 +1,6 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u https://github.com/PotatoProject/manifest -b dumaloo-release -g default,-device,-mips,-darwin,-notdefault
-https://github.com/MinatiScape/local_manifest --depth 1 -b master .repo/local_manifests
+git clone https://github.com/MinatiScape/local_manifest --depth 1 -b master .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
