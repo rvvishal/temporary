@@ -4,6 +4,7 @@ git clone https://github.com/RahifM/local_manifests --depth 1 -b staging/pa-ruby
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
+source build/envsetup.sh
 export TZ=Asia/Kolkata
 ./rom-build.sh mido
 
