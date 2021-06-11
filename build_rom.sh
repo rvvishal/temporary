@@ -4,9 +4,8 @@ git clone  --depth 1 https://github.com/flashokiller/mainfest_personal -b master
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
-source build/envsetup.sh
+. build/envsetup.sh
 lunch spark_ysl-userdebug
-export ALLOW_DEPENDENCIES_MISSING=true
 export TZ=Asia/kolkata #put before last build command
 make spark
 
