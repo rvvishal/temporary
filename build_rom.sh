@@ -7,6 +7,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 source build/envsetup.sh
 lunch du_beryllium-eng
 #export WITH_GMS=true
+make installclean
 export TZ=Asia/Kolkata
 mka bacon
 
