@@ -4,9 +4,9 @@ git clone https://github.com/RahifM/local_manifests --depth 1 -b staging/du-q10x
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
-rm -rf out/target/product/beryllium
 source build/envsetup.sh
 lunch du_beryllium-eng
+make clean && make clobber
 #export WITH_GMS=true
 rm -rf out/target/product/beryllium
 export TZ=Asia/Kolkata
