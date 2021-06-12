@@ -8,7 +8,6 @@ source build/envsetup.sh
 lunch du_beryllium-eng
 make clean && make clobber
 #export WITH_GMS=true
-rm -rf out/target/product/beryllium
 export TZ=Asia/Kolkata
 mka bacon
 
