@@ -6,7 +6,6 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
 source build/envsetup.sh
 lunch du_beryllium-eng
-make clean && make clobber
 #export WITH_GMS=true
 export TZ=Asia/Kolkata
 mka bacon
