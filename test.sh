@@ -36,7 +36,28 @@ then
 	exit 1
 fi
 
-rom_name=$(grep init $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d / -f 4)
-device=$(grep unch $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1)
+installclean_check=$(grep ' installclean' $CIRRUS_WORKING_DIR/build_rom.sh | wc -l)
+if [[ $installclean_check -gt 0 ]]
+then
+	echo Please dont use make installclean. Server does make installclean by default, which is enough for most of the cases. 
+	exit 1
+fi
+
+
+rclone_check=$(grep 'rclone copy' $CIRRUS_WORKING_DIR/build_rom.sh)
+rclone_string="rclone copy out/target/product/\$(grep unch \$CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1)/*.zip cirrus:\$(grep unch \$CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d ' ' -f 2 | cut -d _ -f 2 | cut -d - -f 1) -P"
+if [[ $rclone_check != *$rclone_string* ]]
+then
+	echo Please follow rclone copy line of main branch.
+	exit 1
+fi
+
+sync_check=$(grep 'repo sync' $CIRRUS_WORKING_DIR/build_rom.sh)
+sync_string="repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j"
+if [[ $sync_check != *$sync_string* ]]
+then
+	echo Please follow repo sync line of main branch.
+	exit 1
+fi
 
 echo Test passed
