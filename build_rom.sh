@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-lunch mido-userdebug
+lunch mido-user
 export TZ=Asia/Kolkata
 make -j24 otapackage
 
