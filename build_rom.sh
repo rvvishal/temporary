@@ -2,10 +2,11 @@
 repo init --depth=1 --no-repo-verify -u https://github.com/ProtonAOSP/android_manifest -b rvc -g default,-device,-mips,-darwin,-notdefault
 git clone https://github.com/RahifM/local_manifests --depth 1 -b staging/proton-rvc .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
+./repo_update.sh
 
 # build rom
 source build/envsetup.sh
-lunch mido-user
+lunch mido-userdebug
 export TZ=Asia/Kolkata
 make -j24 otapackage
 
