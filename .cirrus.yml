@@ -62,8 +62,8 @@ task:
     - mkdir -p ~/roms/$rom_name
     - cd ~/roms/$rom_name
 
-    - ls same_rom_running && exit 1 || true
-    - touch same_rom_running
+#    - ls same_rom_running && exit 1 || true
+#    - touch same_rom_running
 
     - rm -rf .repo/local_manifests
     - command=$(head $CIRRUS_WORKING_DIR/build_rom.sh -n $(expr $(grep 'build/envsetup.sh' $CIRRUS_WORKING_DIR/build_rom.sh -n | cut -f1 -d:) - 1))
