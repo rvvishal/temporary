@@ -7,6 +7,9 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 source build/envsetup.sh
 lunch dotfe_platina-userdebug
 export SELINUX_IGNORE_NEVERALLOWS=true
+export SKIP_API_CHECK=true
+export SKIP_ABI_CHECK=true
+export WITH_GAPPS=true
 export TZ=Asia/Jakarta #put before last build command
 make bacon
 
