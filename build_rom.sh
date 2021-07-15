@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
   
 # build rom 
 . build/envsetup.sh
-lunch lineage_lavender-userdebug
+lunch lineage_lavender-user
 export TZ=Asia/kolkata #put before last build command (Time)
 mka bacon -j$(nproc --all)
 
