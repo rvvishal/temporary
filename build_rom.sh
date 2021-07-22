@@ -8,6 +8,7 @@ source build/envsetup.sh
 lunch komodo_RMX1941-userdebug
 export SKIP_API_CHECKS=true
 export SKIP_ABI_CHECKS=true
+export KOMODO_BUILD_TYPE=OFFICIAL
 export ALLOW_MISSING_DEPENDENCIES=true
 export TZ=Asia/Jakarta
 masak komodo
