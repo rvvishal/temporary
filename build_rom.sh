@@ -2,7 +2,7 @@
 repo init --depth=1 --no-repo-verify -u https://github.com/NezukoOS/manifest -b eleven -g default,-device,-mips,-darwin,-notdefault
 git clone https://github.com/Lucifer-morning-star-96/frostmanifest.git --depth 1 -b Nezuko .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
-         
+          
 # build rom 
 . build/envsetup.sh
 lunch nezuko_lavender-user
