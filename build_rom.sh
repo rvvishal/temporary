@@ -2,7 +2,7 @@
 repo init --depth=1 --no-repo-verify -u git://github.com/ProjectSakura/android.git -b 11 -g default,-device,-mips,-darwin,-notdefault
 git clone https://github.com/Lucifer-morning-star-96/frostmanifest.git --depth 1 -b Sakura .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
-    
+     
 # build rom 
 . build/envsetup.sh
 lunch lineage_lavender-user
