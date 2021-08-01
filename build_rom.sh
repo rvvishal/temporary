@@ -1,11 +1,11 @@
 # sync rom
-repo init --depth=1 --no-repo-verify -u https://github.com/NezukoOS/manifest -b eleven -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/MLZ94/local_manifest -b main .repo/local_manifests
+repo init --depth=1 --no-repo-verify -u https://github.com/Bootleggers-BrokenLab/manifest -b rimbon -g default,-device,-mips,-darwin,-notdefault
+git clone https://github.com/MLZ94/local_manifest -b rimbon .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
  
 # build rom
 source build/envsetup.sh
-lunch nezuko_X00QD-user
+lunch bootleg_X00QD-user
 mka bacon
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
