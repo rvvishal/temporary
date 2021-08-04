@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-#lunch lineageos_mido-userdebug
+#lunch lineage_mido-userdebug
 export TZ=Asia/Kolkata #put before last build command
 brunch mido
 
