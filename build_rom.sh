@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-lunch awaken_r2p-userdebug
+lunch awaken_r2p-user
 export TZ=Asia/Dhaka #put before last build command
 m bacon
 
