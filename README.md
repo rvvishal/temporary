@@ -1,4 +1,4 @@
-Conquer OS for Redmi 5 Plus/Note 5 India (Vince)      
+Conquer OS for Redmi 5 Plus/Note 5 India (Vince)        
 ============================== 
 
 Conquer [Custom ROM](https://beebom.com/best-custom-roms-android-phones/) for Redmi Note 4(code name mido)
