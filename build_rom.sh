@@ -1,11 +1,11 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u git://github.com/NusantaraProject-ROM/android_manifest.git -b 11 -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/ItoRenz/local_manifest.git --depth 1 -b nusa .repo/local_manifests
+git clone https://github.com/ItoRenz/local_manifest.git --depth 1 -b nusantara .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 . build/envsetup.sh
-lunch nad_rova-user
+lunch nad_rolex-user
 export TZ=Asia/Jakarta
 export KBUILD_USERNAME=ItoRenz
 mka nad
