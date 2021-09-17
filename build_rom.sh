@@ -1,11 +1,11 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u git://github.com/Wave-Project/manifest.git -b r -b 11 -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/pocox3pro/Local-Manifests.git --depth 1 -b master .repo/local_manifests
+git clone https://github.com/rk134/local_manifests.git --depth 1 -b wave .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 source build/envsetup.sh
-lunch wave_vayu-user
+lunch wave_vince-userdebug
 export SELINUX_IGNORE_NEVERALLOWS=true
 export TZ=Asia/Dhaka #put before last build command
 mka bacon
